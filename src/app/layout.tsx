@@ -9,7 +9,24 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "HidroNortePro — Soluciones en Manejo de Agua",
   description:
-    "Empresa especializada en riego automatizado, bombeo solar sumergible, montaje de cañerías PEAD y mantenimiento de sistemas hidráulicos.",
+    "Empresa especializada en riego automatizado, bombeo solar, montaje de cañerías PEAD y mantenimiento general.",
+  metadataBase: new URL("https://hidronortepro.com"),
+  openGraph: {
+    title: "HidroNortePro — Soluciones en Manejo de Agua",
+    description:
+      "Empresa especializada en riego automatizado, bombeo solar, montaje de cañerías PEAD y mantenimiento general.",
+    url: "https://hidronortepro.com",
+    siteName: "HidroNortePro",
+    images: [
+      {
+        url: "/images/logo-hidronorte.jpg",
+        width: 800,
+        height: 600,
+        alt: "HidroNortePro — Soluciones en Manejo de Agua",
+      },
+    ],
+    type: "website",
+  },
 };
 
 export default function RootLayout({
