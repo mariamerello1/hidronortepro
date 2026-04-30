@@ -32,7 +32,7 @@ export default function LorentzSection() {
           </p>
         </div>
 
-        <div className="relative w-full h-[420px]">
+        <div className="relative w-full h-[220px] sm:h-[320px] md:h-[420px]">
           {PHOTOS.map((src, i) => (
             <div
               key={i}

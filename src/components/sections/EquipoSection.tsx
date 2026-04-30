@@ -30,7 +30,7 @@ export default function EquipoSection() {
           </h2>
         </div>
 
-        <div className="flex flex-col sm:flex-row justify-center gap-10">
+        <div className="flex flex-col sm:flex-row justify-center gap-6 sm:gap-10">
           {TEAM.map((member) => (
             <div key={member.name} className="flex flex-col items-center text-center">
               <div className="w-40 h-40 rounded-full overflow-hidden mb-5 ring-4 ring-brand-light/30">

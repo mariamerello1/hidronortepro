@@ -25,17 +25,16 @@ export default function HeroSection() {
             alt={COMPANY.name}
             width={360}
             height={120}
-            className="w-[320px] h-auto object-contain mix-blend-multiply"
+            className="w-[220px] sm:w-[320px] h-auto object-contain mix-blend-multiply"
             priority
           />
         </div>
 
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-blue leading-tight mb-6">
-          Soluciones Profesionales
-          <br />
-          <span className="text-brand-light">en manejo de agua</span>
+          Soluciones Profesionales{" "}
+          <span className="text-brand-light sm:block">en manejo de agua</span>
         </h1>
-        <p className="text-gray-600 text-sm sm:text-base mx-auto mb-10 text-center whitespace-nowrap">
+        <p className="text-gray-600 text-sm sm:text-base max-w-xl mx-auto mb-10 text-center">
           Riego automatizado, bombeo solar, montaje de cañerías PEAD y mantenimiento general.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
