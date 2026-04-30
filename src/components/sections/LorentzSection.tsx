@@ -22,8 +22,8 @@ export default function LorentzSection() {
 
   return (
     <section className="bg-brand-gray py-20">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+        <div className="text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-brand-blue mb-4">
             Instaladores Certificados Lorentz
           </h2>
@@ -31,38 +31,38 @@ export default function LorentzSection() {
             Equipos de bombeo solar de alta eficiencia, instalados con respaldo técnico oficial.
           </p>
         </div>
+      </div>
 
-        <div className="relative w-full h-[220px] sm:h-[320px] md:h-[420px]">
-          {PHOTOS.map((src, i) => (
-            <div
-              key={i}
-              className="absolute inset-0 transition-opacity duration-700"
-              style={{ opacity: i === current ? 1 : 0 }}
-            >
-              <Image
-                src={src}
-                alt={`Instalación Lorentz ${i + 1}`}
-                fill
-                className="object-contain"
-                sizes="100vw"
-                priority={i === 0}
-              />
-            </div>
-          ))}
-        </div>
-
-        <div className="flex justify-center gap-2 mt-5">
-          {PHOTOS.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setCurrent(i)}
-              className={`w-2.5 h-2.5 rounded-full transition-colors ${
-                i === current ? "bg-brand-blue" : "bg-brand-blue/25"
-              }`}
-              aria-label={`Ir a foto ${i + 1}`}
+      <div className="relative w-full h-[450px] sm:h-[550px]">
+        {PHOTOS.map((src, i) => (
+          <div
+            key={i}
+            className="absolute inset-0 transition-opacity duration-700"
+            style={{ opacity: i === current ? 1 : 0 }}
+          >
+            <Image
+              src={src}
+              alt={`Instalación Lorentz ${i + 1}`}
+              fill
+              className="object-cover"
+              sizes="100vw"
+              priority={i === 0}
             />
-          ))}
-        </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="flex justify-center gap-2 mt-5">
+        {PHOTOS.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setCurrent(i)}
+            className={`w-2.5 h-2.5 rounded-full transition-colors ${
+              i === current ? "bg-brand-blue" : "bg-brand-blue/25"
+            }`}
+            aria-label={`Ir a foto ${i + 1}`}
+          />
+        ))}
       </div>
     </section>
   );
