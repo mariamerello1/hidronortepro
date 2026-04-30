@@ -38,11 +38,11 @@ export default function HeroSection() {
       </div>
 
       {/* Contenido */}
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-20 md:py-20 w-full text-center md:text-left">
+      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-20 md:py-20 w-full text-center md:text-left">
         <div className="md:max-w-[52%]">
 
           {/* Logo */}
-          <div className="flex justify-center md:justify-start mb-6 md:mb-8">
+          <div className="flex justify-center md:justify-start mb-4 md:mb-8">
             <Image
               src="/images/logo-hidronorte.jpg"
               alt={COMPANY.name}
