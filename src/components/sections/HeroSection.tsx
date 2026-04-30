@@ -38,7 +38,7 @@ export default function HeroSection() {
       </div>
 
       {/* Contenido */}
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-20 md:py-20 w-full text-center md:text-left">
+      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-20 md:py-20 w-full text-center md:text-left">
         <div className="md:max-w-[52%]">
 
           {/* Logo */}
