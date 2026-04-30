@@ -10,18 +10,21 @@ export default function HeroSection() {
   return (
     <section
       id="inicio"
-      className="relative bg-brand-gray min-h-[calc(100vh-3.5rem)] flex items-center overflow-hidden"
+      className="relative bg-brand-gray min-h-[calc(100vh-3.5rem)] flex items-start md:items-center overflow-hidden"
     >
       {/* Mobile: imagen de fondo */}
       <div className="md:hidden absolute inset-0">
         <Image
-          src="/images/heromobile.png"
+          src="/images/mobile.png"
           alt=""
           fill
-          className="object-cover object-center"
+          className="object-cover object-top"
           priority
         />
       </div>
+
+      {/* Mobile: overlay superior suave para legibilidad */}
+      <div className="md:hidden absolute inset-0 bg-gradient-to-b from-black/30 via-black/10 to-transparent pointer-events-none" />
 
       {/* Desktop: imagen de fondo */}
       <div className="hidden md:block absolute inset-0">
@@ -34,29 +37,27 @@ export default function HeroSection() {
         />
       </div>
 
-
-
       {/* Contenido */}
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full text-center md:text-left">
+      <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-20 md:py-20 w-full text-center md:text-left">
         <div className="md:max-w-[52%]">
 
           {/* Logo */}
-          <div className="flex justify-center md:justify-start mb-8">
+          <div className="flex justify-center md:justify-start mb-6 md:mb-8">
             <Image
               src="/images/logo-hidronorte.jpg"
               alt={COMPANY.name}
               width={360}
               height={120}
-              className="w-[220px] sm:w-[320px] h-auto object-contain mix-blend-multiply"
+              className="w-[200px] sm:w-[320px] h-auto object-contain mix-blend-multiply"
               priority
             />
           </div>
 
-          <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-brand-blue leading-tight mb-6">
+          <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4 md:mb-6 text-white md:text-brand-blue">
             Soluciones Profesionales{" "}
-            <span className="text-brand-light sm:block">en manejo de agua</span>
+            <span className="text-blue-200 md:text-brand-light sm:block">en manejo de agua</span>
           </h1>
-          <p className="text-gray-600 text-sm sm:text-base max-w-xl mb-10 text-center md:text-left mx-auto md:mx-0">
+          <p className="text-white/90 md:text-gray-600 text-sm sm:text-base max-w-xl mb-8 md:mb-10 text-center md:text-left mx-auto md:mx-0">
             Riego automatizado, bombeo solar, montaje de cañerías PEAD y mantenimiento general.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start items-center md:items-start">
