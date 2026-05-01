@@ -68,7 +68,7 @@ export default function LorentzSection() {
       </div>
 
       {/* Desktop: fila de 4 fotos */}
-      <div className="hidden md:flex w-full h-[400px]">
+      <div className="hidden md:flex w-full h-[400px] gap-[3px]">
         {PHOTOS.map((src, i) => (
           <div key={i} className="relative w-1/4 h-full">
             <Image
