@@ -94,8 +94,6 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${inter.className} h-full`}>
       <head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="shortcut icon" href="/favicon.ico" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
