@@ -36,6 +36,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={`${inter.className} h-full`}>
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+      </head>
       <body className="min-h-full flex flex-col antialiased">
         <Navbar />
         <main className="flex-1">{children}</main>
