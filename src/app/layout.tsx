@@ -11,11 +11,6 @@ export const metadata: Metadata = {
   description:
     "Empresa especializada en riego automatizado, bombeo solar, montaje de cañerías PEAD y mantenimiento general.",
   metadataBase: new URL("https://hidronortepro.com"),
-  icons: {
-    icon: "/icon.png",
-    shortcut: "/favicon.ico",
-    apple: "/icon.png",
-  },
   openGraph: {
     title: "HidroNortePro — Soluciones en Manejo de Agua",
     description:
