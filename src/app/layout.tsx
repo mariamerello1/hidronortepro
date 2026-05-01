@@ -20,6 +20,9 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  verification: {
+    google: "Z3LzEb5vaMfogzgZBgorJwvBI5xSgoORpyqkjcgYQK8",
+  },
   openGraph: {
     title: "HidroNortePro | Riego, Bombeo Solar y Cañerías PEAD en Salta",
     description:
