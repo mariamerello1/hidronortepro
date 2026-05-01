@@ -33,35 +33,52 @@ export default function LorentzSection() {
         </div>
       </div>
 
-      <div className="relative w-full h-[450px] sm:h-[550px]">
+      {/* Mobile: carrusel */}
+      <div className="md:hidden">
+        <div className="relative w-full h-[450px]">
+          {PHOTOS.map((src, i) => (
+            <div
+              key={i}
+              className="absolute inset-0 transition-opacity duration-700"
+              style={{ opacity: i === current ? 1 : 0 }}
+            >
+              <Image
+                src={src}
+                alt={`Instalación Lorentz ${i + 1}`}
+                fill
+                className="object-cover"
+                sizes="100vw"
+                priority={i === 0}
+              />
+            </div>
+          ))}
+        </div>
+        <div className="flex justify-center gap-2 mt-5">
+          {PHOTOS.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrent(i)}
+              className={`w-2.5 h-2.5 rounded-full transition-colors ${
+                i === current ? "bg-brand-blue" : "bg-brand-blue/25"
+              }`}
+              aria-label={`Ir a foto ${i + 1}`}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Desktop: fila de 4 fotos */}
+      <div className="hidden md:flex w-full h-[400px]">
         {PHOTOS.map((src, i) => (
-          <div
-            key={i}
-            className="absolute inset-0 transition-opacity duration-700"
-            style={{ opacity: i === current ? 1 : 0 }}
-          >
+          <div key={i} className="relative w-1/4 h-full">
             <Image
               src={src}
               alt={`Instalación Lorentz ${i + 1}`}
               fill
               className="object-cover"
-              sizes="100vw"
-              priority={i === 0}
+              sizes="25vw"
             />
           </div>
-        ))}
-      </div>
-
-      <div className="flex justify-center gap-2 mt-5">
-        {PHOTOS.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setCurrent(i)}
-            className={`w-2.5 h-2.5 rounded-full transition-colors ${
-              i === current ? "bg-brand-blue" : "bg-brand-blue/25"
-            }`}
-            aria-label={`Ir a foto ${i + 1}`}
-          />
         ))}
       </div>
     </section>
